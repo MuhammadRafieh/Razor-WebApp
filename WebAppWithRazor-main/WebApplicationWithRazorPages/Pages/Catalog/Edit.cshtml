@@ -1,0 +1,50 @@
+@page
+@model Bibliotheca.Pages.Catalog.CatalogEditModel
+@{
+    ViewData["Title"] = "Edit Entry";
+}
+
+<div class="entry-form">
+    <div class="form-panel">
+        <h2 class="panel-title">Modify Existing Entry</h2>
+
+        <form method="post">
+            <input type="hidden" asp-for="Entry.RecordId" />
+
+            <div class="input-group-row">
+                <label asp-for="Entry.WorkTitle" class="field-label">Title</label>
+                <input asp-for="Entry.WorkTitle" class="field-input" />
+            </div>
+
+            <div class="input-group-row">
+                <label asp-for="Entry.Writer" class="field-label">Author</label>
+                <input asp-for="Entry.Writer" class="field-input" />
+            </div>
+
+            <div class="input-group-row">
+                <label asp-for="Entry.Synopsis" class="field-label">Synopsis</label>
+                <input asp-for="Entry.Synopsis" class="field-input" />
+            </div>
+
+            <div class="input-group-row">
+                <label asp-for="Entry.PublishingHouse" class="field-label">Publisher</label>
+                <input asp-for="Entry.PublishingHouse" class="field-input" />
+            </div>
+
+            <div class="input-group-row">
+                <label asp-for="Entry.AvailabilityState" class="field-label">Availability</label>
+                <input asp-for="Entry.AvailabilityState" class="field-input" />
+            </div>
+
+            <div class="input-group-row">
+                <label asp-for="Entry.Genre" class="field-label">Genre</label>
+                <input asp-for="Entry.Genre" class="field-input" />
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="btn btn-outline-dark">Apply Changes</button>
+                <a asp-page="List" class="btn btn-outline-secondary">Cancel</a>
+            </div>
+        </form>
+    </div>
+</div>

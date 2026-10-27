@@ -1,0 +1,13 @@
+@page
+@model HomeIndexModel
+@{
+    ViewData["Title"] = "Welcome";
+}
+
+<section class="hero-section">
+    <div class="hero-content text-center">
+        <h1 class="hero-heading">Literary Archive</h1>
+        <p class="hero-lead">Organize your personal book collection, keep track of inventory, and explore titles without effort.</p>
+        <a asp-page="/Catalog/List" class="btn btn-lg btn-outline-dark mt-3">Open the Catalog</a>
+    </div>
+</section>

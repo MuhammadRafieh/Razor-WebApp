@@ -1,0 +1,208 @@
+/* Custom components for the Literary Archive UI */
+
+.hero-section {
+    padding: 4rem 1rem;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-bottom: 1px solid #dee2e6;
+}
+
+.hero-heading {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #212529;
+    margin-bottom: 1rem;
+}
+
+.hero-lead {
+    font-size: 1.25rem;
+    color: #495057;
+    max-width: 600px;
+    margin: 0 auto 1.5rem;
+}
+
+.archive-container {
+    padding-top: 1rem;
+}
+
+.archive-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.archive-title {
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.work-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.25rem;
+}
+
+.work-card {
+    border: 1px solid #dee2e6;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.work-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.1);
+}
+
+.work-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.25rem;
+    border-bottom: 1px solid #dee2e6;
+    background: #f8f9fa;
+}
+
+.work-name {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #212529;
+}
+
+.work-id {
+    font-size: 0.85rem;
+    color: #6c757d;
+    background: #e9ecef;
+    padding: 0.15rem 0.5rem;
+    border-radius: 1rem;
+}
+
+.work-details {
+    list-style: none;
+    margin: 0;
+    padding: 1rem 1.25rem;
+}
+
+.work-details li {
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+    color: #343a40;
+}
+
+.work-details li:last-child {
+    margin-bottom: 0;
+}
+
+.work-tools {
+    display: flex;
+    gap: 0.5rem;
+    padding: 1rem 1.25rem;
+    border-top: 1px solid #dee2e6;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 3rem 1rem;
+    color: #6c757d;
+}
+
+.entry-form {
+    max-width: 700px;
+    margin: 0 auto;
+    padding-top: 1rem;
+}
+
+.form-panel {
+    border: 1px solid #dee2e6;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    background: #fff;
+}
+
+.panel-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1.25rem;
+}
+
+.input-group-row {
+    margin-bottom: 1rem;
+}
+
+.field-label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.35rem;
+    color: #212529;
+}
+
+.field-input {
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+}
+
+.field-error {
+    display: block;
+    margin-top: 0.25rem;
+    font-size: 0.85rem;
+    color: #dc3545;
+}
+
+.form-actions {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 1.25rem;
+    flex-wrap: wrap;
+}
+
+.confirm-card {
+    max-width: 500px;
+    margin: 2rem auto;
+    padding-top: 1rem;
+}
+
+.confirm-body {
+    border: 1px solid #dee2e6;
+    border-radius: 0.5rem;
+    padding: 1.75rem;
+    background: #fff;
+}
+
+.confirm-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.confirm-body p {
+    margin-bottom: 1.25rem;
+    color: #343a40;
+}
+
+.entry-preview {
+    border: 1px solid #e9ecef;
+    border-radius: 0.35rem;
+    padding: 1rem;
+    margin-bottom: 1.25rem;
+    background: #f8f9fa;
+}
+
+.entry-preview dt {
+    font-weight: 600;
+    color: #495057;
+}
+
+.entry-preview dd {
+    margin: 0 0 0.5rem 0;
+    color: #212529;
+}
+
+.entry-preview dd:last-child {
+    margin-bottom: 0;
+}

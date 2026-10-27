@@ -1,0 +1,40 @@
+﻿/* Application layout customizations */
+
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+a {
+  color: #0d6efd;
+}
+
+.btn-outline-dark {
+  color: #1a1a1a;
+  border-color: #1a1a1a;
+}
+
+.btn-outline-dark:hover {
+  color: #fff;
+  background-color: #1a1a1a;
+}
+
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.05);
+}
+
+.site-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+}

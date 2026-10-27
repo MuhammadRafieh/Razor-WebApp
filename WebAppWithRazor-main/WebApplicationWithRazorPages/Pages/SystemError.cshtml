@@ -1,0 +1,26 @@
+@page
+@model SystemErrorModel
+@{
+    ViewData["Title"] = "Error";
+}
+
+<h1 class="text-danger">An error occurred.</h1>
+<h2 class="text-danger">We were unable to process your request.</h2>
+
+@if (Model.HasTraceId)
+{
+    <p>
+        <strong>Trace ID:</strong> <code>@Model.TraceId</code>
+    </p>
+}
+
+<h3>Development Mode</h3>
+<p>
+    Switching to the <strong>Development</strong> environment shows detailed error information.
+</p>
+<p>
+    <strong>The Development environment must not be used in production.</strong>
+    It may expose sensitive exception details to end users.
+    To enable local debugging, set <strong>ASPNETCORE_ENVIRONMENT</strong> to <strong>Development</strong>
+    and restart the app.
+</p>

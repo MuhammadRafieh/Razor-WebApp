@@ -1,0 +1,43 @@
+@page
+@model Bibliotheca.Pages.Catalog.CatalogListModel
+@{
+    ViewData["Title"] = "Catalog";
+}
+
+<div class="archive-container">
+    <header class="archive-header">
+        <h1 class="archive-title">Book Archive</h1>
+        <a asp-page="Add" class="btn btn-outline-dark">Create New Entry</a>
+    </header>
+
+    @if (Model.AllWorks.Count == 0)
+    {
+        <div class="empty-state">
+            <p>The archive is currently empty.</p>
+        </div>
+    }
+    else
+    {
+        <div class="work-grid">
+            @foreach (var work in Model.AllWorks)
+            {
+                <article class="work-card">
+                    <div class="work-header">
+                        <h3 class="work-name">@work.WorkTitle</h3>
+                        <span class="work-id">#@work.RecordId</span>
+                    </div>
+                    <ul class="work-details">
+                        <li><strong>Author:</strong> @work.Writer</li>
+                        <li><strong>Publisher:</strong> @work.PublishingHouse</li>
+                        <li><strong>Availability:</strong> @work.AvailabilityState</li>
+                        <li><strong>Genre:</strong> @work.Genre</li>
+                    </ul>
+                    <div class="work-tools">
+                        <a asp-page="Edit" asp-route-id="@work.RecordId" class="btn btn-sm btn-outline-warning">Modify Entry</a>
+                        <a asp-page="Remove" asp-route-id="@work.RecordId" class="btn btn-sm btn-outline-danger">Delete Entry</a>
+                    </div>
+                </article>
+            }
+        </div>
+    }
+</div>

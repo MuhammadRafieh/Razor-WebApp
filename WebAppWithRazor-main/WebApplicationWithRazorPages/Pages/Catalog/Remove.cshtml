@@ -1,0 +1,35 @@
+@page
+@model Bibliotheca.Pages.Catalog.CatalogRemoveModel
+@{
+    ViewData["Title"] = "Delete Entry";
+}
+
+<div class="confirm-card">
+    <div class="confirm-body">
+        <h2 class="confirm-title">Delete Entry</h2>
+
+        <p>Are you sure you want to remove this entry from the archive?</p>
+
+        <dl class="entry-preview">
+            <dt>Title</dt>
+            <dd>@Model.Entry.WorkTitle</dd>
+
+            <dt>Author</dt>
+            <dd>@Model.Entry.Writer</dd>
+
+            <dt>Publisher</dt>
+            <dd>@Model.Entry.PublishingHouse</dd>
+
+            <dt>Synopsis</dt>
+            <dd>@Model.Entry.Synopsis</dd>
+
+            <dt>Availability</dt>
+            <dd>@Model.Entry.AvailabilityState</dd>
+        </dl>
+
+        <form method="post" asp-route-id="@Model.Entry.RecordId" data-confirm="Confirm deletion of this entry?">
+            <button type="submit" class="btn btn-outline-danger">Yes, Delete It</button>
+            <a asp-page="List" class="btn btn-outline-secondary">No, Keep It</a>
+        </form>
+    </div>
+</div>

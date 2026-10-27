@@ -1,0 +1,54 @@
+@page
+@model Bibliotheca.Pages.Catalog.CatalogAddModel
+@{
+    ViewData["Title"] = "Create Entry";
+}
+
+<div class="entry-form">
+    <div class="form-panel">
+        <h2 class="panel-title">Add a New Entry</h2>
+
+        <form method="post">
+            <div class="input-group-row">
+                <label asp-for="NewEntry.WorkTitle" class="field-label">Title</label>
+                <input asp-for="NewEntry.WorkTitle" class="field-input" />
+                <span asp-validation-for="NewEntry.WorkTitle" class="field-error"></span>
+            </div>
+
+            <div class="input-group-row">
+                <label asp-for="NewEntry.Writer" class="field-label">Author</label>
+                <input asp-for="NewEntry.Writer" class="field-input" />
+                <span asp-validation-for="NewEntry.Writer" class="field-error"></span>
+            </div>
+
+            <div class="input-group-row">
+                <label asp-for="NewEntry.Synopsis" class="field-label">Synopsis</label>
+                <input asp-for="NewEntry.Synopsis" class="field-input" />
+                <span asp-validation-for="NewEntry.Synopsis" class="field-error"></span>
+            </div>
+
+            <div class="input-group-row">
+                <label asp-for="NewEntry.PublishingHouse" class="field-label">Publisher</label>
+                <input asp-for="NewEntry.PublishingHouse" class="field-input" />
+                <span asp-validation-for="NewEntry.PublishingHouse" class="field-error"></span>
+            </div>
+
+            <div class="input-group-row">
+                <label asp-for="NewEntry.AvailabilityState" class="field-label">Availability</label>
+                <input asp-for="NewEntry.AvailabilityState" class="field-input" />
+                <span asp-validation-for="NewEntry.AvailabilityState" class="field-error"></span>
+            </div>
+
+            <div class="input-group-row">
+                <label asp-for="NewEntry.Genre" class="field-label">Genre</label>
+                <input asp-for="NewEntry.Genre" class="field-input" />
+                <span asp-validation-for="NewEntry.Genre" class="field-error"></span>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="btn btn-outline-dark">Save Entry</button>
+                <a asp-page="List" class="btn btn-outline-secondary">Return to Archive</a>
+            </div>
+        </form>
+    </div>
+</div>
